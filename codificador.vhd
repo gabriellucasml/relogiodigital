@@ -1,5 +1,5 @@
 ENTITY codificador IS
-	PORT(t: IN BIT_VECOTR(9 DOWNTO 0);
+	PORT(t: IN BIT_VECTOR(9 DOWNTO 0);
 		  s: OUT BIT_VECTOR(3 DOWNTO 0));
 END codificador;
 -------------------------------------------------------------------------------------------------------------------------------------------------
