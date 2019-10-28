@@ -4,143 +4,51 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "h1[0]",
+					"name" : "q[0]",
 					"strict" : false
 				},
 				{
-					"name" : "h1[1]",
+					"name" : "q[1]",
 					"strict" : false
 				},
 				{
-					"name" : "h1[2]",
+					"name" : "q[2]",
 					"strict" : false
 				},
 				{
-					"name" : "h1[3]",
+					"name" : "q[3]",
 					"strict" : false
 				},
 				{
-					"name" : "h1[4]",
+					"name" : "d[0]",
 					"strict" : false
 				},
 				{
-					"name" : "h1[5]",
+					"name" : "load",
 					"strict" : false
 				},
 				{
-					"name" : "h1[6]",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "h2[0]",
+					"name" : "clrn",
 					"strict" : false
 				},
 				{
-					"name" : "h2[1]",
+					"name" : "ena",
 					"strict" : false
 				},
 				{
-					"name" : "h2[2]",
+					"name" : "d[1]",
 					"strict" : false
 				},
 				{
-					"name" : "h2[3]",
+					"name" : "d[2]",
 					"strict" : false
 				},
 				{
-					"name" : "h2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "h2[5]",
-					"strict" : false
-				},
-				{
-					"name" : "h2[6]",
-					"strict" : false
-				},
-				{
-					"name" : "m1[0]",
-					"strict" : false
-				},
-				{
-					"name" : "m1[1]",
-					"strict" : false
-				},
-				{
-					"name" : "m1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "m1[3]",
-					"strict" : false
-				},
-				{
-					"name" : "m1[4]",
-					"strict" : false
-				},
-				{
-					"name" : "m1[5]",
-					"strict" : false
-				},
-				{
-					"name" : "m1[6]",
-					"strict" : false
-				},
-				{
-					"name" : "m2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "m2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "m2[6]",
-					"strict" : false
-				},
-				{
-					"name" : "selecao[0]",
-					"strict" : false
-				},
-				{
-					"name" : "selecao[1]",
-					"strict" : false
-				},
-				{
-					"name" : "teclado[6]",
-					"strict" : false
-				},
-				{
-					"name" : "teclado[4]",
-					"strict" : false
-				},
-				{
-					"name" : "teclado[3]",
-					"strict" : false
-				},
-				{
-					"name" : "teclado[7]",
-					"strict" : false
-				},
-				{
-					"name" : "teclado[9]",
-					"strict" : false
-				},
-				{
-					"name" : "teclado[1]",
-					"strict" : false
-				},
-				{
-					"name" : "teclado[5]",
-					"strict" : false
-				},
-				{
-					"name" : "teclado[2]",
-					"strict" : false
-				},
-				{
-					"name" : "teclado[8]",
+					"name" : "d[3]",
 					"strict" : false
 				}
 			]

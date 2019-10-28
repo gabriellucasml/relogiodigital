@@ -1,6 +1,10 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.std_logic_unsigned.ALL;
+
 ENTITY codificador IS
-	PORT(t: IN BIT_VECTOR(9 DOWNTO 0);
-		  s: OUT BIT_VECTOR(3 DOWNTO 0));
+	PORT(t: IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+		  s: OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 END codificador;
 -------------------------------------------------------------------------------------------------------------------------------------------------
 ARCHITECTURE structural OF codificador IS

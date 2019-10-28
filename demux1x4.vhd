@@ -1,7 +1,11 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.std_logic_unsigned.ALL;
+
 ENTITY demux1x4 IS
-	PORT(a : IN BIT_VECTOR(3 DOWNTO 0);
-		  sel : IN BIT_VECTOR(1 DOWNTO 0);
-		  s1, s2, s3, s4 : OUT BIT_VECTOR(3 DOWNTO 0));
+	PORT(a : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  sel : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+		  s1, s2, s3, s4 : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 END demux1x4;		  
 -------------------------------------------------------------------------------------------------------------------------------------------------
 ARCHITECTURE structural OF demux1x4 IS

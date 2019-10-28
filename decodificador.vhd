@@ -1,6 +1,10 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.std_logic_unsigned.ALL;
+
 ENTITY decodificador IS
-	PORT(s : IN BIT_VECTOR(3 DOWNTO 0);
-		  a, b, c, d, e, f, g : OUT BIT);
+	PORT(s : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		  a, b, c, d, e, f, g : OUT STD_LOGIC);
 END decodificador;
 -------------------------------------------------------------------------------------------------------------------------------------------------
 ARCHITECTURE structural OF decodificador IS
