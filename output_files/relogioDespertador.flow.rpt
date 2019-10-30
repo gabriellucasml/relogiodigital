@@ -1,5 +1,5 @@
 Flow report for relogioDespertador
-Wed Oct 30 17:01:12 2019
+Wed Oct 30 19:00:00 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,14 +40,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Oct 30 17:01:12 2019       ;
+; Flow Status                     ; Successful - Wed Oct 30 19:00:00 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; relogioDespertador                          ;
 ; Top-level Entity Name           ; relogioDespertador                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 39 / 56,480 ( < 1 % )                       ;
+; Logic utilization (in ALMs)     ; 42 / 56,480 ( < 1 % )                       ;
 ; Total registers                 ; 16                                          ;
 ; Total pins                      ; 43 / 268 ( 16 % )                           ;
 ; Total virtual pins              ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/30/2019 16:57:28 ;
+; Start date & time ; 10/30/2019 18:57:49 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; relogioDespertador  ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 132241052973599.157246544813408        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 17727280392839.157247266908519         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -96,26 +96,26 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:43     ; 1.0                     ; 1016 MB             ; 00:01:12                           ;
-; Fitter               ; 00:02:09     ; 1.0                     ; 2221 MB             ; 00:02:46                           ;
-; Assembler            ; 00:00:18     ; 1.0                     ; 970 MB              ; 00:00:15                           ;
-; Timing Analyzer      ; 00:00:11     ; 1.0                     ; 1182 MB             ; 00:00:09                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 1141 MB             ; 00:00:01                           ;
-; Total                ; 00:03:23     ; --                      ; --                  ; 00:04:23                           ;
+; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 1027 MB             ; 00:00:27                           ;
+; Fitter               ; 00:01:11     ; 1.0                     ; 2286 MB             ; 00:01:31                           ;
+; Assembler            ; 00:00:17     ; 1.0                     ; 975 MB              ; 00:00:12                           ;
+; Timing Analyzer      ; 00:00:10     ; 1.0                     ; 1230 MB             ; 00:00:09                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 1156 MB             ; 00:00:02                           ;
+; Total                ; 00:01:58     ; --                      ; --                  ; 00:02:21                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------+
-; Flow OS Summary                                                                  ;
-+----------------------+------------------+----------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name  ; OS Version ; Processor type ;
-+----------------------+------------------+----------+------------+----------------+
-; Analysis & Synthesis ; GabrielsPC       ; Zorin OS ; 15         ; x86_64         ;
-; Fitter               ; GabrielsPC       ; Zorin OS ; 15         ; x86_64         ;
-; Assembler            ; GabrielsPC       ; Zorin OS ; 15         ; x86_64         ;
-; Timing Analyzer      ; GabrielsPC       ; Zorin OS ; 15         ; x86_64         ;
-; EDA Netlist Writer   ; GabrielsPC       ; Zorin OS ; 15         ; x86_64         ;
-+----------------------+------------------+----------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++----------------------+------------------+----------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
++----------------------+------------------+----------------+------------+----------------+
+; Analysis & Synthesis ; A202-15L         ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; Fitter               ; A202-15L         ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; Assembler            ; A202-15L         ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; Timing Analyzer      ; A202-15L         ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
+; EDA Netlist Writer   ; A202-15L         ; Ubuntu 16.04.5 ; 16         ; x86_64         ;
++----------------------+------------------+----------------+------------+----------------+
 
 
 ------------

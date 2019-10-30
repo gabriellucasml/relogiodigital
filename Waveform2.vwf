@@ -30,6 +30,7 @@ quit -f
 
 
 
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -48,6 +49,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 
 
 
@@ -875,7 +877,7 @@ TRANSITION_LIST("selecao[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -884,7 +886,7 @@ TRANSITION_LIST("selecao[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -956,7 +958,7 @@ TRANSITION_LIST("teclado[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -1008,7 +1010,7 @@ DISPLAY_LINE
 DISPLAY_LINE
 {
 	CHANNEL = "selecao";
-	EXPAND_STATUS = EXPANDED;
+	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
 	TREE_LEVEL = 0;
@@ -1038,7 +1040,7 @@ DISPLAY_LINE
 DISPLAY_LINE
 {
 	CHANNEL = "teclado";
-	EXPAND_STATUS = EXPANDED;
+	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
 	TREE_LEVEL = 0;

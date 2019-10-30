@@ -1,7 +1,7 @@
 # do relogioDespertador.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:53:33 on Oct 30,2019
+# Start time: 18:33:29 on Oct 30,2019
 # vcom -work work relogioDespertador.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -15,20 +15,20 @@
 # -- Loading package cyclonev_components
 # -- Compiling entity relogioDespertador
 # -- Compiling architecture structure of relogioDespertador
-# End time: 16:53:33 on Oct 30,2019, Elapsed time: 0:00:00
+# End time: 18:33:30 on Oct 30,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:53:33 on Oct 30,2019
-# vcom -work work Waveform2.vwf.vht 
+# Start time: 18:33:30 on Oct 30,2019
+# vcom -work work Waveform4.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity relogioDespertador_vhd_vec_tst
 # -- Compiling architecture relogioDespertador_arch of relogioDespertador_vhd_vec_tst
-# End time: 16:53:33 on Oct 30,2019, Elapsed time: 0:00:00
+# End time: 18:33:30 on Oct 30,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.relogioDespertador_vhd_vec_tst 
-# Start time: 16:53:33 on Oct 30,2019
+# Start time: 18:33:30 on Oct 30,2019
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -47,9 +47,8 @@
 # Loading cyclonev.cyclonev_clkena(behavior)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 17106 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 22606 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#34
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# End time: 16:53:34 on Oct 30,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 2
+# End time: 18:33:31 on Oct 30,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1

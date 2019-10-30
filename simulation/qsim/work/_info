@@ -189,7 +189,7 @@ R24
 R18
 R19
 Erelogiodespertador
-Z29 w1572465212
+Z29 w1572471206
 R2
 R3
 R4
@@ -199,18 +199,18 @@ R7
 R8
 R9
 R10
-R0
+Z30 d/home/gabrielucasml/programs/circuitos/relogiodigital/simulation/qsim
 R11
 R12
 l0
 L38
-V^C35=fm24lQ5WgJ7U]JXa1
-!s100 AKzg2PMi3akBX]AZBYRGo0
+VAQjNTN9a7oQ>[2M19:SkK2
+!s100 5R:@e5?gQQ7RhTm6@A]fg3
 R13
 32
-Z30 !s110 1572465213
+Z31 !s110 1572471210
 !i10b 1
-Z31 !s108 1572465213.000000
+Z32 !s108 1572471209.000000
 R16
 R17
 !i113 1
@@ -226,57 +226,57 @@ R7
 R8
 R9
 R10
-DEx4 work 18 relogiodespertador 0 22 ^C35=fm24lQ5WgJ7U]JXa1
-l215
-L98
-VG]8j:OV9QL1BVdoDR8HlC2
-!s100 nZb9@FifKWnhld>RkC`b10
+DEx4 work 18 relogiodespertador 0 22 AQjNTN9a7oQ>[2M19:SkK2
+l249
+L96
+V=YR3hK=aobDDO6TV@;_eg2
+!s100 dJLYQK@=0<JS@3kRRSO@L2
 R13
 32
-R30
-!i10b 1
 R31
+!i10b 1
+R32
 R16
 R17
 !i113 1
 R18
 R19
 Erelogiodespertador_vhd_vec_tst
-Z32 w1572465209
+Z33 w1572471203
 R8
 R9
-R0
-R21
-R22
+R30
+Z34 8Waveform4.vwf.vht
+Z35 FWaveform4.vwf.vht
 l0
 L31
 V4e;HCgITmlCM@?`3YPUSL1
 !s100 6[CidDRlWh@U4S<CWXTQ:2
 R13
 32
-R30
-!i10b 1
 R31
-R23
-R24
+!i10b 1
+Z36 !s108 1572471210.000000
+Z37 !s90 -work|work|Waveform4.vwf.vht|
+Z38 !s107 Waveform4.vwf.vht|
 !i113 1
 R18
 R19
 Arelogiodespertador_arch
 R8
 R9
-Z33 DEx4 work 30 relogiodespertador_vhd_vec_tst 0 22 4e;HCgITmlCM@?`3YPUSL1
-l58
+Z39 DEx4 work 30 relogiodespertador_vhd_vec_tst 0 22 4e;HCgITmlCM@?`3YPUSL1
+l56
 L33
-VSVa>DdnUjTQ1@C6Md;<i41
-!s100 1TT7`MLHcoKG0zZZ5mQD40
+V43[FWz0NG]bF2P0UIT4XC3
+!s100 >YOQ?>jl>V5LLf_k2Y`bO1
 R13
 32
-R30
-!i10b 1
 R31
-R23
-R24
+!i10b 1
+R36
+R37
+R38
 !i113 1
 R18
 R19

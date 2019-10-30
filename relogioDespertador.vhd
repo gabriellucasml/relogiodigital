@@ -6,9 +6,9 @@ ENTITY relogioDespertador IS
 	PORT(teclado : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
 		  selecao : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 		  CLK : IN STD_LOGIC;
-		  enable : IN STD_LOGIC;--min0
 		  load : IN STD_LOGIC;
-		  hora1, hora0 , min1, min0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)); 
+		  hora1, hora0 , min1, min0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+		  alarme : OUT STD_LOGIC); 
 END relogioDespertador;		  
 -------------------------------------------------------------------------------------------------------------------------------------------------
 ARCHITECTURE structural OF relogioDespertador IS
@@ -32,15 +32,31 @@ ARCHITECTURE structural OF relogioDespertador IS
 				load: IN STD_LOGIC; -- load
 				q : BUFFER STD_LOGIC_VECTOR(W-1 DOWNTO 0));-- data output
 	END COMPONENT;
+	
+	COMPONENT comparador IS
+		PORT(h0A, h1A, m0A, m1A : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+			  h0, h1, m0, m1 : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		     enable : IN STD_LOGIC;
+		     clk : IN STD_LOGIC;
+		     alarme : OUT STD_LOGIC);
+	END COMPONENT;
+ 
+	COMPONENT registradord IS
+		GENERIC(W : NATURAL := 4);
+		PORT(d : IN STD_LOGIC_VECTOR(W-1 DOWNTO 0);
+		     clk : IN STD_LOGIC;
+		     enable : IN STD_LOGIC;
+		     q : OUT STD_LOGIC_VECTOR(W-1 DOWNTO 0));
+	END COMPONENT;		  
 
 	COMPONENT controlador IS
-		PORT(h0  : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- unidade das horas
-			  h1  : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- dezena das horas
-			  m0  : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- unidade dos minutos
-			  m1  : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- dezena dos minutos
-			  clk : IN STD_LOGIC;
-			  cln : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)); -- cln(0) -> unidade dos minutos, cln(1) -> dezenas dos minutos
-														    -- cln(2) -> unidade das horas, cln(3) -> dezena das horas
+		PORT(h0     : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- unidade das horas
+			  h1     : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- dezena das horas
+			  m0     : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- unidade dos minutos
+			  m1     : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- dezena dos minutos
+			  clk    : IN STD_LOGIC;
+			  cln    : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+			  enable : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)); 
 	END COMPONENT;
 	
 	COMPONENT decodificador IS
@@ -49,18 +65,18 @@ ARCHITECTURE structural OF relogioDespertador IS
 	END COMPONENT;
 	
 	SIGNAL codigoTeclado : STD_LOGIC_VECTOR(3 DOWNTO 0); --h1 = dez. horas| h0 = uni. horas| m1 = dez. min| m0 = uni. min
-	SIGNAL cln, h1, h0, m1, m0 : STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SIGNAL cln, enable, h1, h0, m1, m0 : STD_LOGIC_VECTOR(3 DOWNTO 0);
 	SIGNAL qm0, qm1, qh0, qh1 : STD_LOGIC_VECTOR(3 DOWNTO 0);
 	
 BEGIN
 		cod : codificador PORT MAP(teclado, codigoTeclado);
 		demux : demux1x4 PORT MAP(codigoTeclado, selecao, h1, h0, m1, m0);
 		
-		contm0 : contador PORT MAP(m0, CLK, cln(0), enable, load, qm0);
-		contm1 : contador PORT MAP(m1, CLK, cln(1), cln(0), load, qm1);
-		conth0 : contador PORT MAP(h0, CLK, cln(2), cln(1), load, qh0);
-		conth1 : contador PORT MAP(h1, CLK, cln(3), cln(2), load, qh1);
-		control: controlador PORT MAP(qh0, qh1, qm0, qm1, CLK, cln);
+		contm0 : contador PORT MAP(m0, CLK, cln(0), enable(0), load, qm0);
+		contm1 : contador PORT MAP(m1, CLK, cln(1), enable(1), load, qm1);
+		conth0 : contador PORT MAP(h0, CLK, cln(2), enable(2), load, qh0);
+		conth1 : contador PORT MAP(h1, CLK, cln(3), enable(3), load, qh1);
+		control: controlador PORT MAP(qh0, qh1, qm0, qm1, CLK, cln, enable);
 		
 		display1 : decodificador PORT MAP(qm0, min0(0), min0(1), min0(2), min0(3), min0(4), min0(5), min0(6));
 		display2 : decodificador PORT MAP(qm1, min1(0), min1(1), min1(2), min1(3), min1(4), min1(5), min1(6));

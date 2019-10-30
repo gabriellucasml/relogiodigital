@@ -166,10 +166,6 @@
 				{
 					"name" : "teclado[1]",
 					"strict" : false
-				},
-				{
-					"name" : "enable",
-					"strict" : false
 				}
 			]
 		}

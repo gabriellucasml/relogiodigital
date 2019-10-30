@@ -16,7 +16,6 @@ CLK => contador:contm1.clk
 CLK => contador:conth0.clk
 CLK => contador:conth1.clk
 CLK => controlador:control.clk
-enable => contador:contm0.ena
 load => contador:contm0.load
 load => contador:contm1.load
 load => contador:conth0.load
@@ -49,6 +48,7 @@ min0[3] <= decodificador:display1.d
 min0[4] <= decodificador:display1.e
 min0[5] <= decodificador:display1.f
 min0[6] <= decodificador:display1.g
+alarme <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogioDespertador|codificador:cod
@@ -227,21 +227,25 @@ q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 |relogioDespertador|controlador:control
 h0[0] => Equal0.IN7
+h0[0] => Equal4.IN7
 h0[1] => Equal0.IN6
+h0[1] => Equal4.IN6
 h0[2] => Equal0.IN5
+h0[2] => Equal4.IN5
 h0[3] => Equal0.IN4
+h0[3] => Equal4.IN4
 h1[0] => Equal1.IN7
 h1[1] => Equal1.IN6
 h1[2] => Equal1.IN5
 h1[3] => Equal1.IN4
 m0[0] => Equal2.IN7
-m0[0] => Equal4.IN7
+m0[0] => Equal5.IN7
 m0[1] => Equal2.IN6
-m0[1] => Equal4.IN6
+m0[1] => Equal5.IN6
 m0[2] => Equal2.IN5
-m0[2] => Equal4.IN5
+m0[2] => Equal5.IN5
 m0[3] => Equal2.IN4
-m0[3] => Equal4.IN4
+m0[3] => Equal5.IN4
 m1[0] => Equal3.IN7
 m1[1] => Equal3.IN6
 m1[2] => Equal3.IN5
@@ -249,8 +253,12 @@ m1[3] => Equal3.IN4
 clk => ~NO_FANOUT~
 cln[0] <= cln.DB_MAX_OUTPUT_PORT_TYPE
 cln[1] <= cln.DB_MAX_OUTPUT_PORT_TYPE
-cln[2] <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+cln[2] <= cln.DB_MAX_OUTPUT_PORT_TYPE
 cln[3] <= process_0.DB_MAX_OUTPUT_PORT_TYPE
+enable[0] <= <VCC>
+enable[1] <= enable.DB_MAX_OUTPUT_PORT_TYPE
+enable[2] <= enable.DB_MAX_OUTPUT_PORT_TYPE
+enable[3] <= enable.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |relogioDespertador|decodificador:display1
