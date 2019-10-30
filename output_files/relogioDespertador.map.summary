@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Mon Oct 28 20:34:09 2019
+Analysis & Synthesis Status : Successful - Wed Oct 30 16:58:11 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : relogioDespertador
-Top-level Entity Name : contador
+Top-level Entity Name : relogioDespertador
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 4
-Total pins : 12
+Total registers : 16
+Total pins : 43
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

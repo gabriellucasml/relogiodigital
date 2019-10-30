@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/home/gabriel/programs/circuitos/relogiodigital/simulation/qsim
 Econtador
-Z1 w1572306129
+Z1 w1572461082
 Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
 Z3 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
 Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
@@ -28,9 +28,9 @@ V7hdJ`YCY8J17[`;Pj4Cmk1
 !s100 Tn>0Y5h<F><mYl3Q9TlMH2
 Z13 OV;C;10.5b;63
 32
-Z14 !s110 1572306130
+Z14 !s110 1572461082
 !i10b 1
-Z15 !s108 1572306130.000000
+Z15 !s108 1572461082.000000
 Z16 !s90 -work|work|relogioDespertador.vho|
 Z17 !s107 relogioDespertador.vho|
 !i113 1
@@ -62,7 +62,7 @@ R17
 R18
 R19
 Econtador_vhd_vec_tst
-Z20 w1572306127
+Z20 w1572461079
 R8
 R9
 R0
@@ -85,11 +85,11 @@ R19
 Acontador_arch
 R8
 R9
-Z25 DEx4 work 20 contador_vhd_vec_tst 0 22 ^D>G1RMko;40zZhR3o7bL3
+DEx4 work 20 contador_vhd_vec_tst 0 22 ^D>G1RMko;40zZhR3o7bL3
 l52
 L33
-VW9dSMh=_]Q737HmWCNHBX2
-!s100 Gz@17O81Fc^_IcP1ca8UO2
+V0>9UP`a0fUn@3JiIP3UB]0
+!s100 m1[]EKDRm;_=c[UbhlaCP1
 R13
 32
 R14
@@ -101,7 +101,7 @@ R24
 R18
 R19
 Econtrolador
-Z26 w1572305420
+Z25 w1572461558
 R5
 R2
 R7
@@ -118,9 +118,9 @@ VXnE`mlh>NEGfaG=J6nfh@3
 !s100 Bf>Z]:2Z@HYAk^gikU;>g2
 R13
 32
-Z27 !s110 1572305425
+Z26 !s110 1572461559
 !i10b 1
-Z28 !s108 1572305424.000000
+Z27 !s108 1572461559.000000
 R16
 R17
 !i113 1
@@ -141,16 +141,16 @@ VA?52Iknghh1F7HC_JZFnH1
 !s100 D_FGZkbUPL`YXNAD1Hj_03
 R13
 32
-R27
+R26
 !i10b 1
-R28
+R27
 R16
 R17
 !i113 1
 R18
 R19
 Econtrolador_vhd_vec_tst
-Z29 w1572305418
+Z28 w1572461555
 R8
 R9
 R0
@@ -162,9 +162,9 @@ Vh@P[lk5cDiB?BgZoAX:1Q3
 !s100 d6ZK`0>dPc1gEnS;XM^N?3
 R13
 32
-R27
+R26
 !i10b 1
-Z30 !s108 1572305425.000000
+R27
 R23
 R24
 !i113 1
@@ -176,20 +176,20 @@ R9
 DEx4 work 23 controlador_vhd_vec_tst 0 22 h@P[lk5cDiB?BgZoAX:1Q3
 l52
 L33
-V4@m;iFbRQ5?igg4o`]Bj12
-!s100 :50Kd1COHE2Z@e<cWaeJ31
+Ve4m[hW6jLENa3j1JIznE:2
+!s100 :[[17iIE^hzWhAF<fQYK[2
 R13
 32
-R27
+R26
 !i10b 1
-R30
+R27
 R23
 R24
 !i113 1
 R18
 R19
 Erelogiodespertador
-Z31 w1572293333
+Z29 w1572465212
 R2
 R3
 R4
@@ -204,13 +204,13 @@ R11
 R12
 l0
 L38
-VX:g;i??@NB;1kX4=3h[Zc3
-!s100 ]cHf8CinJ^8zDl]^TmaUK2
+V^C35=fm24lQ5WgJ7U]JXa1
+!s100 AKzg2PMi3akBX]AZBYRGo0
 R13
 32
-Z32 !s110 1572293334
+Z30 !s110 1572465213
 !i10b 1
-Z33 !s108 1572293334.000000
+Z31 !s108 1572465213.000000
 R16
 R17
 !i113 1
@@ -226,23 +226,23 @@ R7
 R8
 R9
 R10
-DEx4 work 18 relogiodespertador 0 22 X:g;i??@NB;1kX4=3h[Zc3
-l236
-L101
-VHZVa<VEiZ1XaAFBWZgb7O1
-!s100 CbA=TDSJF]zjZYS;K>NHh2
+DEx4 work 18 relogiodespertador 0 22 ^C35=fm24lQ5WgJ7U]JXa1
+l215
+L98
+VG]8j:OV9QL1BVdoDR8HlC2
+!s100 nZb9@FifKWnhld>RkC`b10
 R13
 32
-R32
+R30
 !i10b 1
-R33
+R31
 R16
 R17
 !i113 1
 R18
 R19
 Erelogiodespertador_vhd_vec_tst
-Z34 w1572293331
+Z32 w1572465209
 R8
 R9
 R0
@@ -254,9 +254,9 @@ V4e;HCgITmlCM@?`3YPUSL1
 !s100 6[CidDRlWh@U4S<CWXTQ:2
 R13
 32
-R32
+R30
 !i10b 1
-R33
+R31
 R23
 R24
 !i113 1
@@ -265,16 +265,16 @@ R19
 Arelogiodespertador_arch
 R8
 R9
-DEx4 work 30 relogiodespertador_vhd_vec_tst 0 22 4e;HCgITmlCM@?`3YPUSL1
+Z33 DEx4 work 30 relogiodespertador_vhd_vec_tst 0 22 4e;HCgITmlCM@?`3YPUSL1
 l58
 L33
-V0[FBjeHz[PKhKS8gjUBd63
-!s100 [<VnQ^BY>=0jb>G8eHg?k2
+VSVa>DdnUjTQ1@C6Md;<i41
+!s100 1TT7`MLHcoKG0zZZ5mQD40
 R13
 32
-R32
+R30
 !i10b 1
-R33
+R31
 R23
 R24
 !i113 1

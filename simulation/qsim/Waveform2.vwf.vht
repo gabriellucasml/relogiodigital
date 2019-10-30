@@ -18,9 +18,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/28/2019 20:42:07"
+-- Generated on "10/30/2019 16:53:29"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          contador
+-- Vhdl Test Bench(with test vectors) for design  :          relogioDespertador
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -28,95 +28,145 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY contador_vhd_vec_tst IS
-END contador_vhd_vec_tst;
-ARCHITECTURE contador_arch OF contador_vhd_vec_tst IS
+ENTITY relogioDespertador_vhd_vec_tst IS
+END relogioDespertador_vhd_vec_tst;
+ARCHITECTURE relogioDespertador_arch OF relogioDespertador_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL clk : STD_LOGIC;
-SIGNAL clrn : STD_LOGIC;
-SIGNAL d : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL ena : STD_LOGIC;
+SIGNAL CLK : STD_LOGIC;
+SIGNAL enable : STD_LOGIC;
+SIGNAL hora0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL hora1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL load : STD_LOGIC;
-SIGNAL q : STD_LOGIC_VECTOR(3 DOWNTO 0);
-COMPONENT contador
+SIGNAL min0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL min1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL selecao : STD_LOGIC_VECTOR(1 DOWNTO 0);
+SIGNAL teclado : STD_LOGIC_VECTOR(9 DOWNTO 0);
+COMPONENT relogioDespertador
 	PORT (
-	clk : IN STD_LOGIC;
-	clrn : IN STD_LOGIC;
-	d : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	ena : IN STD_LOGIC;
+	CLK : IN STD_LOGIC;
+	enable : IN STD_LOGIC;
+	hora0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	hora1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	load : IN STD_LOGIC;
-	q : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0)
+	min0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	min1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	selecao : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+	teclado : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
-	i1 : contador
+	i1 : relogioDespertador
 	PORT MAP (
 -- list connections between master ports and signals
-	clk => clk,
-	clrn => clrn,
-	d => d,
-	ena => ena,
+	CLK => CLK,
+	enable => enable,
+	hora0 => hora0,
+	hora1 => hora1,
 	load => load,
-	q => q
+	min0 => min0,
+	min1 => min1,
+	selecao => selecao,
+	teclado => teclado
 	);
 
--- clk
-t_prcs_clk: PROCESS
+-- CLK
+t_prcs_CLK: PROCESS
 BEGIN
 LOOP
-	clk <= '0';
+	CLK <= '0';
 	WAIT FOR 5000 ps;
-	clk <= '1';
+	CLK <= '1';
 	WAIT FOR 5000 ps;
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
-END PROCESS t_prcs_clk;
+END PROCESS t_prcs_CLK;
 
--- clrn
-t_prcs_clrn: PROCESS
+-- enable
+t_prcs_enable: PROCESS
 BEGIN
-	clrn <= '1';
+	enable <= '1';
 WAIT;
-END PROCESS t_prcs_clrn;
--- d[3]
-t_prcs_d_3: PROCESS
-BEGIN
-	d(3) <= '0';
-WAIT;
-END PROCESS t_prcs_d_3;
--- d[2]
-t_prcs_d_2: PROCESS
-BEGIN
-	d(2) <= '0';
-WAIT;
-END PROCESS t_prcs_d_2;
--- d[1]
-t_prcs_d_1: PROCESS
-BEGIN
-	d(1) <= '1';
-WAIT;
-END PROCESS t_prcs_d_1;
--- d[0]
-t_prcs_d_0: PROCESS
-BEGIN
-	d(0) <= '1';
-WAIT;
-END PROCESS t_prcs_d_0;
-
--- ena
-t_prcs_ena: PROCESS
-BEGIN
-	ena <= '1';
-WAIT;
-END PROCESS t_prcs_ena;
+END PROCESS t_prcs_enable;
 
 -- load
 t_prcs_load: PROCESS
 BEGIN
 	load <= '1';
-	WAIT FOR 100000 ps;
+	WAIT FOR 20000 ps;
 	load <= '0';
 WAIT;
 END PROCESS t_prcs_load;
-END contador_arch;
+-- selecao[1]
+t_prcs_selecao_1: PROCESS
+BEGIN
+	selecao(1) <= '1';
+WAIT;
+END PROCESS t_prcs_selecao_1;
+-- selecao[0]
+t_prcs_selecao_0: PROCESS
+BEGIN
+	selecao(0) <= '1';
+WAIT;
+END PROCESS t_prcs_selecao_0;
+-- teclado[9]
+t_prcs_teclado_9: PROCESS
+BEGIN
+	teclado(9) <= '0';
+WAIT;
+END PROCESS t_prcs_teclado_9;
+-- teclado[8]
+t_prcs_teclado_8: PROCESS
+BEGIN
+	teclado(8) <= '0';
+WAIT;
+END PROCESS t_prcs_teclado_8;
+-- teclado[7]
+t_prcs_teclado_7: PROCESS
+BEGIN
+	teclado(7) <= '0';
+WAIT;
+END PROCESS t_prcs_teclado_7;
+-- teclado[6]
+t_prcs_teclado_6: PROCESS
+BEGIN
+	teclado(6) <= '0';
+WAIT;
+END PROCESS t_prcs_teclado_6;
+-- teclado[5]
+t_prcs_teclado_5: PROCESS
+BEGIN
+	teclado(5) <= '0';
+WAIT;
+END PROCESS t_prcs_teclado_5;
+-- teclado[4]
+t_prcs_teclado_4: PROCESS
+BEGIN
+	teclado(4) <= '0';
+WAIT;
+END PROCESS t_prcs_teclado_4;
+-- teclado[3]
+t_prcs_teclado_3: PROCESS
+BEGIN
+	teclado(3) <= '0';
+WAIT;
+END PROCESS t_prcs_teclado_3;
+-- teclado[2]
+t_prcs_teclado_2: PROCESS
+BEGIN
+	teclado(2) <= '1';
+WAIT;
+END PROCESS t_prcs_teclado_2;
+-- teclado[1]
+t_prcs_teclado_1: PROCESS
+BEGIN
+	teclado(1) <= '0';
+WAIT;
+END PROCESS t_prcs_teclado_1;
+-- teclado[0]
+t_prcs_teclado_0: PROCESS
+BEGIN
+	teclado(0) <= '0';
+WAIT;
+END PROCESS t_prcs_teclado_0;
+END relogioDespertador_arch;

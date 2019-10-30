@@ -1,5 +1,5 @@
 Analysis & Synthesis report for relogioDespertador
-Mon Oct 28 20:34:09 2019
+Wed Oct 30 16:58:11 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,10 +14,13 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |contador
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: contador:contm0
+ 10. Parameter Settings for User Entity Instance: contador:contm1
+ 11. Parameter Settings for User Entity Instance: contador:conth0
+ 12. Parameter Settings for User Entity Instance: contador:conth1
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -43,14 +46,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct 28 20:34:09 2019       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 30 16:58:11 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; relogioDespertador                          ;
-; Top-level Entity Name           ; contador                                    ;
+; Top-level Entity Name           ; relogioDespertador                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 4                                           ;
-; Total pins                      ; 12                                          ;
+; Total registers                 ; 16                                          ;
+; Total pins                      ; 43                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -69,7 +72,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; contador           ; relogioDespertador ;
+; Top-level entity name                                                           ; relogioDespertador ; relogioDespertador ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -167,49 +170,65 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                        ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                 ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
-; contador.vhd                     ; yes             ; User VHDL File  ; /home/gabriel/programs/circuitos/relogiodigital/contador.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
+; codificador.vhd                  ; yes             ; User VHDL File  ; /home/gabriel/programs/circuitos/relogiodigital/codificador.vhd        ;         ;
+; demux1x4.vhd                     ; yes             ; User VHDL File  ; /home/gabriel/programs/circuitos/relogiodigital/demux1x4.vhd           ;         ;
+; decodificador.vhd                ; yes             ; User VHDL File  ; /home/gabriel/programs/circuitos/relogiodigital/decodificador.vhd      ;         ;
+; relogioDespertador.vhd           ; yes             ; User VHDL File  ; /home/gabriel/programs/circuitos/relogiodigital/relogioDespertador.vhd ;         ;
+; contador.vhd                     ; yes             ; User VHDL File  ; /home/gabriel/programs/circuitos/relogiodigital/contador.vhd           ;         ;
+; controlador.vhd                  ; yes             ; User VHDL File  ; /home/gabriel/programs/circuitos/relogiodigital/controlador.vhd        ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 3         ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 4         ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 1         ;
-;     -- 5 input functions                    ; 1         ;
-;     -- 4 input functions                    ; 1         ;
-;     -- <=3 input functions                  ; 1         ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 4         ;
-;                                             ;           ;
-; I/O pins                                    ; 12        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; q[0]~reg0 ;
-; Maximum fan-out                             ; 5         ;
-; Total fan-out                               ; 50        ;
-; Average fan-out                             ; 1.56      ;
-+---------------------------------------------+-----------+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 39         ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 67         ;
+;     -- 7 input functions                    ; 0          ;
+;     -- 6 input functions                    ; 10         ;
+;     -- 5 input functions                    ; 12         ;
+;     -- 4 input functions                    ; 19         ;
+;     -- <=3 input functions                  ; 26         ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 16         ;
+;                                             ;            ;
+; I/O pins                                    ; 43         ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; load~input ;
+; Maximum fan-out                             ; 22         ;
+; Total fan-out                               ; 399        ;
+; Average fan-out                             ; 2.36       ;
++---------------------------------------------+------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |contador                  ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 12   ; 0            ; |contador           ; contador    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name        ; Library Name ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+--------------------+--------------+
+; |relogioDespertador         ; 67 (0)              ; 16 (0)                    ; 0                 ; 0          ; 43   ; 0            ; |relogioDespertador                        ; relogioDespertador ; work         ;
+;    |codificador:cod|        ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |relogioDespertador|codificador:cod        ; codificador        ; work         ;
+;    |contador:conth0|        ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |relogioDespertador|contador:conth0        ; contador           ; work         ;
+;    |contador:conth1|        ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |relogioDespertador|contador:conth1        ; contador           ; work         ;
+;    |contador:contm0|        ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |relogioDespertador|contador:contm0        ; contador           ; work         ;
+;    |contador:contm1|        ; 8 (8)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |relogioDespertador|contador:contm1        ; contador           ; work         ;
+;    |controlador:control|    ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |relogioDespertador|controlador:control    ; controlador        ; work         ;
+;    |decodificador:display1| ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |relogioDespertador|decodificador:display1 ; decodificador      ; work         ;
+;    |decodificador:display2| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |relogioDespertador|decodificador:display2 ; decodificador      ; work         ;
+;    |decodificador:display3| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |relogioDespertador|decodificador:display3 ; decodificador      ; work         ;
+;    |decodificador:display4| ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |relogioDespertador|decodificador:display4 ; decodificador      ; work         ;
+;    |demux1x4:demux|         ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |relogioDespertador|demux1x4:demux         ; demux1x4           ; work         ;
++-----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -218,23 +237,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
+; Total registers                              ; 16    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Synchronous Load   ; 3     ;
+; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |contador ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; W              ; 4     ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: contador:contm0 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; w              ; 4     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: contador:contm1 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; w              ; 4     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: contador:conth0 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; w              ; 4     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: contador:conth1 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; w              ; 4     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -243,18 +292,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 4                           ;
-;     ENA CLR           ; 4                           ;
-; arriav_lcell_comb     ; 4                           ;
-;     normal            ; 4                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 1                           ;
-;         6 data inputs ; 1                           ;
-; boundary_port         ; 12                          ;
+; arriav_ff             ; 16                          ;
+;     CLR               ; 7                           ;
+;     CLR SLD           ; 1                           ;
+;     ENA CLR           ; 6                           ;
+;     ENA CLR SLD       ; 2                           ;
+; arriav_lcell_comb     ; 69                          ;
+;     normal            ; 69                          ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 21                          ;
+;         4 data inputs ; 19                          ;
+;         5 data inputs ; 12                          ;
+;         6 data inputs ; 10                          ;
+; boundary_port         ; 43                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.81                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 1.75                        ;
 +-----------------------+-----------------------------+
 
 
@@ -273,7 +327,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Oct 28 20:33:34 2019
+    Info: Processing started: Wed Oct 30 16:57:27 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off relogioDespertador -c relogioDespertador
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -293,20 +347,27 @@ Info (12021): Found 2 design units, including 1 entities, in source file contado
     Info (12022): Found design unit 1: contador-arch_1 File: /home/gabriel/programs/circuitos/relogiodigital/contador.vhd Line: 15
     Info (12023): Found entity 1: contador File: /home/gabriel/programs/circuitos/relogiodigital/contador.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file controlador.vhd
-    Info (12022): Found design unit 1: controlador-behavior File: /home/gabriel/programs/circuitos/relogiodigital/controlador.vhd Line: 16
+    Info (12022): Found design unit 1: controlador-behavior File: /home/gabriel/programs/circuitos/relogiodigital/controlador.vhd Line: 15
     Info (12023): Found entity 1: controlador File: /home/gabriel/programs/circuitos/relogiodigital/controlador.vhd Line: 5
-Info (12127): Elaborating entity "contador" for the top level hierarchy
+Info (12127): Elaborating entity "relogioDespertador" for the top level hierarchy
+Info (12128): Elaborating entity "codificador" for hierarchy "codificador:cod" File: /home/gabriel/programs/circuitos/relogiodigital/relogioDespertador.vhd Line: 56
+Info (12128): Elaborating entity "demux1x4" for hierarchy "demux1x4:demux" File: /home/gabriel/programs/circuitos/relogiodigital/relogioDespertador.vhd Line: 57
+Info (12128): Elaborating entity "contador" for hierarchy "contador:contm0" File: /home/gabriel/programs/circuitos/relogiodigital/relogioDespertador.vhd Line: 59
+Info (12128): Elaborating entity "controlador" for hierarchy "controlador:control" File: /home/gabriel/programs/circuitos/relogiodigital/relogioDespertador.vhd Line: 63
+Info (12128): Elaborating entity "decodificador" for hierarchy "decodificador:display1" File: /home/gabriel/programs/circuitos/relogiodigital/relogioDespertador.vhd Line: 65
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 4 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1027 megabytes
-    Info: Processing ended: Mon Oct 28 20:34:09 2019
-    Info: Elapsed time: 00:00:35
-    Info: Total CPU time (on all processors): 00:00:48
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "teclado[0]" File: /home/gabriel/programs/circuitos/relogiodigital/relogioDespertador.vhd Line: 6
+Info (21057): Implemented 110 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 28 output pins
+    Info (21061): Implemented 67 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 1037 megabytes
+    Info: Processing ended: Wed Oct 30 16:58:11 2019
+    Info: Elapsed time: 00:00:44
+    Info: Total CPU time (on all processors): 00:01:12
 
 

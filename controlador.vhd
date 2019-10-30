@@ -9,13 +9,12 @@ ENTITY controlador IS
 		  m1  : IN STD_LOGIC_VECTOR(3 DOWNTO 0); -- dezena dos minutos
 		  clk : IN STD_LOGIC;
 		  cln : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)); -- cln(0) -> unidade dos minutos, cln(1) -> dezenas dos minutos
-														 -- cln(2) -> unidade das horas, cln(3) -> dezena das horas
-		  
+														 -- cln(2) -> unidade das horas, cln(3) -> dezena das horas		  
 END controlador;
 -------------------------------------------------------------------------------------------------------------------------
 ARCHITECTURE behavior OF controlador IS
 BEGIN
-	PROCESS(h0, h1, m0, m1)
+	PROCESS(h0, h1, m0, m1, clk)
 	BEGIN	
 		IF(h0 = "0011" AND h1 = "0010" AND m0 = "1001" AND m1 = "0101") THEN --se o relogio marca 23h59
 			cln(0) <= '0';--zera todos os registradores

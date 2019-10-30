@@ -14,7 +14,7 @@ END contador;
 -------------------------------------------------------------------------------------------------------------------------
 ARCHITECTURE arch_1 OF contador IS
 BEGIN
-	PROCESS(clk,clrn)
+	PROCESS(clk, clrn)
 	BEGIN
 		IF (clrn='0') THEN
 			q <= (OTHERS => '0');

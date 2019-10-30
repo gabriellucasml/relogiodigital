@@ -6,7 +6,7 @@ ENTITY relogioDespertador IS
 	PORT(teclado : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
 		  selecao : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 		  CLK : IN STD_LOGIC;
-		  enable : IN STD_LOGIC_VECTOR(3 DOWNTO 0);--0 = min0 1 = min1 2 = hora0 3 = hora1
+		  enable : IN STD_LOGIC;--min0
 		  load : IN STD_LOGIC;
 		  hora1, hora0 , min1, min0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)); 
 END relogioDespertador;		  
@@ -56,10 +56,10 @@ BEGIN
 		cod : codificador PORT MAP(teclado, codigoTeclado);
 		demux : demux1x4 PORT MAP(codigoTeclado, selecao, h1, h0, m1, m0);
 		
-		contm0 : contador PORT MAP(m0, CLK, cln(0), enable(0), load, qm0);
-		contm1 : contador PORT MAP(m1, NOT cln(0), cln(1) ,enable(1), load, qm1);
-		conth0 : contador PORT MAP(h0, NOT cln(1), cln(2), enable(2), load, qh0);
-		conth1 : contador PORT MAP(h1, NOT cln(2), cln(3), enable(3), load, qh1);
+		contm0 : contador PORT MAP(m0, CLK, cln(0), enable, load, qm0);
+		contm1 : contador PORT MAP(m1, CLK, cln(1), cln(0), load, qm1);
+		conth0 : contador PORT MAP(h0, CLK, cln(2), cln(1), load, qh0);
+		conth1 : contador PORT MAP(h1, CLK, cln(3), cln(2), load, qh1);
 		control: controlador PORT MAP(qh0, qh1, qm0, qm1, CLK, cln);
 		
 		display1 : decodificador PORT MAP(qm0, min0(0), min0(1), min0(2), min0(3), min0(4), min0(5), min0(6));

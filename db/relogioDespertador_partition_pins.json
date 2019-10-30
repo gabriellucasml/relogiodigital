@@ -4,23 +4,115 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "q[0]",
+					"name" : "hora1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "q[1]",
+					"name" : "hora1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "q[2]",
+					"name" : "hora1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "q[3]",
+					"name" : "hora1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "d[0]",
+					"name" : "hora1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hora1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hora1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "hora0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "hora0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "hora0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "hora0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "hora0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "hora0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "hora0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "min1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "min1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "min1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "min1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "min1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "min1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "min1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "min0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "min0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "min0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "min0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "min0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "min0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "min0[6]",
 					"strict" : false
 				},
 				{
@@ -28,27 +120,55 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "teclado[8]",
 					"strict" : false
 				},
 				{
-					"name" : "clrn",
+					"name" : "teclado[9]",
 					"strict" : false
 				},
 				{
-					"name" : "ena",
+					"name" : "selecao[0]",
 					"strict" : false
 				},
 				{
-					"name" : "d[1]",
+					"name" : "selecao[1]",
 					"strict" : false
 				},
 				{
-					"name" : "d[2]",
+					"name" : "CLK",
 					"strict" : false
 				},
 				{
-					"name" : "d[3]",
+					"name" : "teclado[2]",
+					"strict" : false
+				},
+				{
+					"name" : "teclado[6]",
+					"strict" : false
+				},
+				{
+					"name" : "teclado[3]",
+					"strict" : false
+				},
+				{
+					"name" : "teclado[7]",
+					"strict" : false
+				},
+				{
+					"name" : "teclado[4]",
+					"strict" : false
+				},
+				{
+					"name" : "teclado[5]",
+					"strict" : false
+				},
+				{
+					"name" : "teclado[1]",
+					"strict" : false
+				},
+				{
+					"name" : "enable",
 					"strict" : false
 				}
 			]
